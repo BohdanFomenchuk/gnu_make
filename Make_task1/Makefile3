@@ -1,0 +1,11 @@
+all: main
+
+main: main.o src1.o
+	gcc $^ -o $@
+
+src1.o: src1.c
+	gcc -c $<
+
+clean:
+	rm -rf main *.o
+
